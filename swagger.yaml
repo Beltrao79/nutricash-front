@@ -1,0 +1,39 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "NUTRICASH"
+  contact: {}
+host: "us-east1-weighty-arcadia-339119.cloudfunctions.net"
+basePath: "/"
+tags:
+- name: "Misc"
+  description: ""
+schemes:
+- "https"
+consumes:
+- "multipart/form-data"
+produces:
+- "application/json"
+paths:
+  /Nutricash:
+    post:
+      tags:
+      - "Misc"
+      summary: "Upload File Cloud Functions"
+      operationId: "upload_file_cloud_functions"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "file"
+        in: "formData"
+        description: "Upload arquivos de placas."
+        required: false
+        type: "file"
+      deprecated: false
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      x-swagger-router-controller: "swagger_server.controllers.misc_controller"
+securityDefinitions: {}
